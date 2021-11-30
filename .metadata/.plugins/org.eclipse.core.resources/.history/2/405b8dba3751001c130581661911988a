@@ -1,0 +1,10 @@
+#include "libro.h"
+
+//brief Crea memoria para un nuevo elemento libro
+//param void
+//param void
+//return pLibro
+
+eLibro*
+
+

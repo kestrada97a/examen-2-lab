@@ -1,0 +1,11 @@
+#ifndef EDITORIAL_H_
+#define EDITORIAL_H_
+typedef struct
+{
+	int idEditorial;
+	char nombre[51];
+
+}eEditorial;
+
+
+#endif /* EDITORIAL_H_ */

@@ -1,0 +1,16 @@
+#include "libro.h"
+
+//brief Crea memoria para un nuevo elemento libro
+//param void
+//param void
+//return pLibro
+
+eLibro* libro_new()
+{
+	eLibro* pLibro;
+	pLibro = (eLibro*) malloc (sizeof(eLibro));
+
+	return pLibro;
+}
+
+

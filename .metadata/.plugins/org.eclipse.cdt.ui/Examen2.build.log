@@ -1,0 +1,24 @@
+18:40:56 **** Incremental Build of configuration Debug for project Examen2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Examen2.o" "..\\src\\Examen2.c" 
+..\src\Examen2.c: In function 'main':
+..\src\Examen2.c:40:39: error: incomplete universal character name \U
+   40 |    auxId=controller_loadLibroFromText("C:\Users\brake\Desktop\Examen lab 2\Examen2\src\editorial.csv", pArrayListLibro);
+      |                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Examen2.c:40:39: warning: unknown escape sequence: '\D'
+..\src\Examen2.c:40:39: warning: unknown escape sequence: '\s'
+..\src\Examen2.c:27:14: warning: variable 'pArrayListEditorial' set but not used [-Wunused-but-set-variable]
+   27 |  LinkedList* pArrayListEditorial=NULL;
+      |              ^~~~~~~~~~~~~~~~~~~
+..\src\Examen2.c:25:6: warning: unused variable 'testeo' [-Wunused-variable]
+   25 |  int testeo;
+      |      ^~~~~~
+..\src\Examen2.c:24:6: warning: unused variable 'flagMenu' [-Wunused-variable]
+   24 |  int flagMenu=-1;
+      |      ^~~~~~~~
+..\src\Examen2.c:23:6: warning: unused variable 'corroboracion' [-Wunused-variable]
+   23 |  int corroboracion;
+      |      ^~~~~~~~~~~~~
+
+18:40:56 Build Failed. 1 errors, 6 warnings. (took 161ms)
+

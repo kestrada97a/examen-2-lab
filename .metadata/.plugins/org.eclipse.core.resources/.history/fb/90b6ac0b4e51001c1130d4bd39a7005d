@@ -1,0 +1,47 @@
+#include "parser.h"
+
+/** \brief Parsea los datos los datos de los libros desde el archivo data.csv (modo texto).
+ *
+ * \param path char*
+ * \param pArrayListLibro LinkedList*
+ * \return int
+ *
+ */
+int parser_libroFromText(FILE* pFile, LinkedList* pArrayListLibro)
+{
+	int idAux;
+	char id[100];
+	char titulo[100];
+	char autor[100];
+	char precio[25];
+	char idEditorial[25];
+	eLibro* pLibro;
+	fscanf(pFile,"%[^,],%[^,],%[^,],%[^,],%[^\n]\n",id,titulo,autor,precio,idEditorial);
+	while(!feof(pFile))
+	{
+		fscanf(pFile,"%[^,],%[^,],%[^,],%[^,],%[^\n]\n",id,titulo,autor,precio,idEditorial);
+		pLibro = libro_newParametros(id, titulo, autor, precio, idEditorial);
+		ll_add(pArrayListLibro,pLibro);
+		libro_getId(pLibro, &idAux);
+	}
+	return idAux;
+
+}
+
+int parser_editorialFromText(FILE* pFile, LinkedList* pArrayListEditorial)
+{
+	int idAux;
+	char idEditorial[25];
+	char nombre[100];
+	eEditorial* pEditorial;
+	fscanf(pFile,"%[^,],%[^\n]\n",idEditorial,nombre);
+	while(!feof(pFile))
+	{
+	fscanf(pFile,"%[^,],%[^\n]\n",idEditorial,nombre);
+	pEditorial= editorial_newParametros(idEditorial, nombre);
+	ll_add(pArrayListEditorial);
+	editorial_getId(pEditorial, &idAux);
+	}
+	return idAux;
+}
+

@@ -1,0 +1,8 @@
+#ifndef PARSER_H_
+#define PARSER_H_
+#include "libro.h"
+#include "LinkedList.h"
+int parser_libroFromText(FILE* pFile, LinkedList* pArrayListLibro);
+int parser_editorialFromText(FILE* pFile, LinkedList* pArrayListEditorial);
+
+#endif

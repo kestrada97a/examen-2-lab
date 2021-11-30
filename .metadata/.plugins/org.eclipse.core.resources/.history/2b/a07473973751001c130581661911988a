@@ -1,0 +1,15 @@
+
+#ifndef LIBRO_H_
+#define LIBRO_H_
+typedef struct
+{
+	int id;
+	char titulo[51];
+	char autor[51];
+	float precio;
+	int idEditorial;
+
+}eLibro;
+
+
+#endif /* LIBRO_H_ */
