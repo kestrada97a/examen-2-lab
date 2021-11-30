@@ -741,3 +741,20 @@ gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Examen2.o" "..\\src\\Examen2.c"
 ..\src\Examen2.c:23:6: warning: unused variable 'corroboracion' [-Wunused-variable]
    23 |  int corroboracion;
       |      ^~~~~~~~~~~~~
+18:49:11 **** Incremental Build of configuration Debug for project Examen2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Examen2.o" "..\\src\\Examen2.c" 
+..\src\Examen2.c: In function 'main':
+..\src\Examen2.c:27:14: warning: variable 'pArrayListEditorial' set but not used [-Wunused-but-set-variable]
+   27 |  LinkedList* pArrayListEditorial=NULL;
+      |              ^~~~~~~~~~~~~~~~~~~
+..\src\Examen2.c:25:6: warning: unused variable 'testeo' [-Wunused-variable]
+   25 |  int testeo;
+      |      ^~~~~~
+..\src\Examen2.c:24:6: warning: unused variable 'flagMenu' [-Wunused-variable]
+   24 |  int flagMenu=-1;
+      |      ^~~~~~~~
+..\src\Examen2.c:23:6: warning: unused variable 'corroboracion' [-Wunused-variable]
+   23 |  int corroboracion;
+      |      ^~~~~~~~~~~~~
+gcc -o Examen2.exe "src\\Examen2.o" "src\\General.o" "src\\LinkedList.o" "src\\controller.o" "src\\editorial.o" "src\\libro.o" "src\\parser.o" 

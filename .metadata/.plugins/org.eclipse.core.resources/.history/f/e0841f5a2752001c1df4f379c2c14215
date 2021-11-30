@@ -37,7 +37,7 @@ int main(void)
 		{
 		case 1:
 			pedirString("Ingrese que desea abrir", auxxiliar);
-			auxId=controller_loadLibroFromText("C:\\Users\\brake\\Desktop\\Examen lab 2\\Examen2\\src\\editorial.csv", pArrayListLibro);
+			auxId=controller_loadLibroFromText("C:\Users\brake\Desktop\Examen lab 2\Examen2\src\editorial.csv", pArrayListLibro);
 			if(auxId==1)
 			{
 				printf("nice\n");
