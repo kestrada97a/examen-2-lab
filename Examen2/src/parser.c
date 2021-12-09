@@ -133,6 +133,7 @@ int saveLibroAsText(LinkedList* pArrayListLibro, FILE* path)
 	return rtn;
 }
 
+
 //brief Guarda los datos de las editoriales en el archivo editorial.csv(modo texto)
 //param path char
 //param LinkedList* pArrayListEditorial
@@ -191,3 +192,4 @@ int saveEditorialAsBinary(LinkedList* pArrayListEditorial, FILE* path)
 	return rtn;
 
 }
+

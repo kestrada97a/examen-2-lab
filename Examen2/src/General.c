@@ -4,10 +4,14 @@
 ///
 void menu(void)
 {
-	printf("1- Abrir archivo\n"
-		   "2- Ordenar lista por Autor\n"
-		   "3- Imprimir lista de libros\n"
-		   "4- Lista de libros de la editorial MINOTAURO\n");
+	printf("1- Abrir archivo De libros\n"
+		   "2- Abrir archivo De editoriales\n"
+		   "3- Ordenar lista por Autor\n"
+		   "4- Imprimir lista de libros\n"
+		   "5- Lista de libros de la editorial MINOTAURO\n"
+		   "6- Generar el archivo 'mapeado.csv'\n"
+		   "7- Determinar cuantos libros cuestan mas de $500\n"
+		   "8- Determinar la sumatoria de los precios de los libros de PEARSON\n");
 }
 
 ///brief: subMenu para el menu
@@ -16,8 +20,8 @@ void menu(void)
 void subMenu(void)
 {
 	printf("Archivos disponibles:\n"
-				"1- editorial.csv"
-				"2- libro.csv");
+				"Editorial.csv\n"
+				"Libro.csv\n");
 }
 
 //brief pide un entero a ingresar pero limitado con un maximo incluido

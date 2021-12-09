@@ -1,0 +1,86 @@
+/*
+ ============================================================================
+ Name        : Examen2.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "editorial.h"
+#include "libro.h"
+#include "controller.h"
+#include "General.h"
+int main(void)
+{
+	setbuf(stdout,NULL);
+	int opcion;
+	char nombreLibro[50]="Libro.csv";
+	char nombreEditorial[50]="Editorial.csv";
+	char auxiliar[20];
+	int corroboracion;
+	int flagMenu=-1;
+	char archivo1[200]="C:\\Users\\brake\\Desktop\\Examen lab 2\\Examen2\\src\\Libro.csv";
+	char archivo2[200]="C:\\Users\\brake\\Desktop\\Examen lab 2\\Examen2\\src\\Editorial.csv";
+	LinkedList* pArrayListLibro=NULL;
+	LinkedList* pArrayListEditorial=NULL;
+	pArrayListLibro=ll_newLinkedList();
+	pArrayListEditorial=ll_newLinkedList();
+
+
+	do
+	{
+		menu();
+		opcion=ingresarEnteroConMaximo("Ingrese opcion: ", 6);
+		switch(opcion)
+		{
+		case 1:
+			pedirString("Ingrese archivo que desea abrir: ", auxiliar);
+			if(strcmp(auxiliar,nombreLibro)==0)
+			{
+				corroboracion=controller_loadLibroFromText(archivo1, pArrayListLibro);
+				MensajeDeError(corroboracion, "Carga completa.\n", "error, en la carga.\n");
+			}
+			flagMenu=1;
+			break;
+		case 2:
+			pedirString("Ingrese archivo que desea abrir: ", auxiliar);
+			if(strcmp(auxiliar,nombreEditorial)==0)
+			{
+				corroboracion=controller_loadEditorialFromText(archivo2, pArrayListEditorial);
+				MensajeDeError(corroboracion, "Carga completa.\n", "error, en la carga.\n");
+			}
+			flagMenu=1;
+			break;
+		case 3:
+			if(flagMenu==1)
+			{
+			corroboracion=controller_sortLibro(pArrayListLibro);
+			MensajeDeError(corroboracion, "Exito", "error");
+			}
+			else
+			{
+				printf("Debe cargar libros primero");
+			}
+			break;
+		case 4:
+			break;
+		case 5:
+			break;
+		}
+
+
+
+
+
+	}while(opcion!=6);
+
+	ll_deleteLinkedList(pArrayListLibro);
+
+
+	return EXIT_SUCCESS;
+}

@@ -201,6 +201,74 @@ int libro_sortByAutor(void* primerDato, void* segundoDato)
 	}
 	return rtn;
 
-	int comparacion= -1;
-
 }
+
+///brief filtra libros por autor MINOTAURO
+//param void* element
+///
+int filtroMinotauro (void* pElement)
+{
+	int rtn=-1;
+	eLibro* pLibro;
+	pLibro=(eLibro*)pElement;
+	if(pLibro!=NULL && pLibro->idEditorial==4)
+	{
+
+		rtn=1;
+	}
+	return rtn;
+}
+
+///brief filtra los libros por precio y por idAutor
+// param void* element
+//el segundo filtro de precio no lo va a hacer porque ningun libro en el csv es menor a 200.
+void* filtroPlanetaXXI(void * pElement)
+{
+	int auxiliar;
+	eLibro* pLibro;
+	pLibro=pElement;
+	if(pLibro!=NULL)
+	{
+		if(pLibro->idEditorial==1 && pLibro->precio>=300)
+		{
+			auxiliar=pLibro->precio*20/100;
+			pLibro->precio=pLibro->precio-auxiliar;
+		}
+		if(pLibro->idEditorial==2 && pLibro->precio<=200)
+		{
+			auxiliar=pLibro->precio*10/100;
+			pLibro->precio=pLibro->precio-auxiliar;
+		}
+
+
+	}
+	return pLibro;
+}
+
+///brief cuenta libros por precio
+//param
+///
+int libro_acumulador_contador(void* pElement, float* pTotal)
+{
+	int rtn=0;
+	float total=0;
+	total=*pTotal;
+	eLibro* pLibro;
+	pLibro=pElement;
+	if(pLibro!=NULL)
+	{
+		if(pLibro->precio>500)
+		{
+			rtn=1;
+		}
+		if(pLibro->idEditorial==3)
+		{
+			rtn=pLibro->precio+rtn;
+			total=rtn+total;
+		}
+		*pTotal=total;
+	}
+
+	return rtn;
+}
+

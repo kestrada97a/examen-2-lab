@@ -12,4 +12,6 @@ int saveEditorialAsText(LinkedList* pArrayListEditorial, FILE* path);
 int saveLibroAsBinary(LinkedList* pArrayListLibro, FILE* path);
 int saveEditorialAsBinary(LinkedList* pArrayListEditorial, FILE* path);
 
+int parser_saveLibrosMinotauro(LinkedList* pArrayListMinotauro, FILE* path);
+
 #endif

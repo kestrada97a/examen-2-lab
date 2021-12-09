@@ -1,760 +1,154 @@
-14:50:37 **** Rebuild of configuration Debug for project Examen2 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\libro.o" "..\\src\\libro.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Examen2.o" "..\\src\\Examen2.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\editorial.o" "..\\src\\editorial.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
-gcc -o Examen2.exe "src\\Examen2.o" "src\\LinkedList.o" "src\\editorial.o" "src\\libro.o" 
-16:47:00 **** Incremental Build of configuration Debug for project Examen2 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\editorial.o" "..\\src\\editorial.c" 
-..\src\editorial.c:7:13: error: conflicting types for 'editorial_new'
-    7 | eEditorial* editorial_new()
-      |             ^~~~~~~~~~~~~
-In file included from ..\src\editorial.c:1:
-..\src\editorial.h:15:12: note: previous declaration of 'editorial_new' was here
-   15 | eEditorial editorial_new();
-      |            ^~~~~~~~~~~~~
-..\src\editorial.c: In function 'editorial_setId':
-..\src\editorial.c:38:20: warning: left-hand operand of comma expression has no effect [-Wunused-value]
-   38 |   this->idEditorial,idEditorial;
-      |                    ^
-..\src\editorial.c:38:3: warning: statement with no effect [-Wunused-value]
-   38 |   this->idEditorial,idEditorial;
-      |   ^~~~
-16:47:21 **** Incremental Build of configuration Debug for project Examen2 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\libro.o" "..\\src\\libro.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\parser.o" "..\\src\\parser.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Examen2.o" "..\\src\\Examen2.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\editorial.o" "..\\src\\editorial.c" 
-..\src\editorial.c:7:13: error: conflicting types for 'editorial_new'
-    7 | eEditorial* editorial_new()
-      |             ^~~~~~~~~~~~~
-In file included from ..\src\editorial.c:1:
-..\src\editorial.h:15:12: note: previous declaration of 'editorial_new' was here
-   15 | eEditorial editorial_new();
-      |            ^~~~~~~~~~~~~
-16:48:17 **** Incremental Build of configuration Debug for project Examen2 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\editorial.o" "..\\src\\editorial.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Examen2.o" "..\\src\\Examen2.c" 
-gcc -o Examen2.exe "src\\Examen2.o" "src\\LinkedList.o" "src\\editorial.o" "src\\libro.o" "src\\parser.o" 
-16:52:55 **** Incremental Build of configuration Debug for project Examen2 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\parser.o" "..\\src\\parser.c" 
-..\src\parser.c: In function 'parser_editorialFromText':
-..\src\parser.c:36:2: error: unknown type name 'eEditorial'
-   36 |  eEditorial* pEditorial;
-      |  ^~~~~~~~~~
-..\src\parser.c:41:14: warning: implicit declaration of function 'editorial_newParametros'; did you mean 'libro_newParametros'? [-Wimplicit-function-declaration]
-   41 |  pEditorial= editorial_newParametros(idEditorial, nombre);
-      |              ^~~~~~~~~~~~~~~~~~~~~~~
-      |              libro_newParametros
-..\src\parser.c:41:12: warning: assignment to 'int *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
-   41 |  pEditorial= editorial_newParametros(idEditorial, nombre);
-      |            ^
-..\src\parser.c:42:2: error: too few arguments to function 'll_add'
-   42 |  ll_add(pArrayListEditorial);
-      |  ^~~~~~
-In file included from ..\src\parser.h:4,
-                 from ..\src\parser.c:1:
-..\src\LinkedList.h:33:5: note: declared here
-   33 | int ll_add(LinkedList* this, void* pElement);
-      |     ^~~~~~
-..\src\parser.c:43:2: warning: implicit declaration of function 'editorial_getId' [-Wimplicit-function-declaration]
-   43 |  editorial_getId(pEditorial, &idAux);
-      |  ^~~~~~~~~~~~~~~
-16:53:23 **** Incremental Build of configuration Debug for project Examen2 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\parser.o" "..\\src\\parser.c" 
-..\src\parser.c: In function 'parser_editorialFromText':
-..\src\parser.c:42:2: error: too few arguments to function 'll_add'
-   42 |  ll_add(pArrayListEditorial);
-      |  ^~~~~~
-In file included from ..\src\parser.h:5,
-                 from ..\src\parser.c:1:
-..\src\LinkedList.h:33:5: note: declared here
-   33 | int ll_add(LinkedList* this, void* pElement);
-      |     ^~~~~~
-16:53:24 **** Incremental Build of configuration Debug for project Examen2 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\parser.o" "..\\src\\parser.c" 
-..\src\parser.c: In function 'parser_editorialFromText':
-..\src\parser.c:42:2: error: too few arguments to function 'll_add'
-   42 |  ll_add(pArrayListEditorial);
-      |  ^~~~~~
-In file included from ..\src\parser.h:5,
-                 from ..\src\parser.c:1:
-..\src\LinkedList.h:33:5: note: declared here
-   33 | int ll_add(LinkedList* this, void* pElement);
-      |     ^~~~~~
-16:53:38 **** Incremental Build of configuration Debug for project Examen2 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\parser.o" "..\\src\\parser.c" 
-gcc -o Examen2.exe "src\\Examen2.o" "src\\LinkedList.o" "src\\editorial.o" "src\\libro.o" "src\\parser.o" 
-16:57:07 **** Incremental Build of configuration Debug for project Examen2 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\parser.o" "..\\src\\parser.c" 
-gcc -o Examen2.exe "src\\Examen2.o" "src\\LinkedList.o" "src\\editorial.o" "src\\libro.o" "src\\parser.o" 
-16:59:08 **** Incremental Build of configuration Debug for project Examen2 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\parser.o" "..\\src\\parser.c" 
-..\src\parser.c:89:1: error: expected '=', ',', ';', 'asm' or '__attribute__' at end of input
-   89 | int parser_Emplo
-      | ^~~
-17:01:43 **** Incremental Build of configuration Debug for project Examen2 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\parser.o" "..\\src\\parser.c" 
-gcc -o Examen2.exe "src\\Examen2.o" "src\\LinkedList.o" "src\\editorial.o" "src\\libro.o" "src\\parser.o" 
-17:52:27 **** Incremental Build of configuration Debug for project Examen2 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\parser.o" "..\\src\\parser.c" 
-gcc -o Examen2.exe "src\\Examen2.o" "src\\LinkedList.o" "src\\editorial.o" "src\\libro.o" "src\\parser.o" 
-17:55:11 **** Incremental Build of configuration Debug for project Examen2 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\parser.o" "..\\src\\parser.c" 
-gcc -o Examen2.exe "src\\Examen2.o" "src\\LinkedList.o" "src\\editorial.o" "src\\libro.o" "src\\parser.o" 
-19:49:58 **** Rebuild of configuration Debug for project Examen2 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\editorial.o" "..\\src\\editorial.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\controller.o" "..\\src\\controller.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\parser.o" "..\\src\\parser.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Examen2.o" "..\\src\\Examen2.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\libro.o" "..\\src\\libro.c" 
-gcc -o Examen2.exe "src\\Examen2.o" "src\\LinkedList.o" "src\\controller.o" "src\\editorial.o" "src\\libro.o" "src\\parser.o" 
-20:02:48 **** Incremental Build of configuration Debug for project Examen2 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\controller.o" "..\\src\\controller.c" 
-gcc -o Examen2.exe "src\\Examen2.o" "src\\LinkedList.o" "src\\controller.o" "src\\editorial.o" "src\\libro.o" "src\\parser.o" 
-14:22:45 **** Incremental Build of configuration Debug for project Examen2 ****
+13:07:01 **** Rebuild of configuration Debug for project Examen2 ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Examen2.o" "..\\src\\Examen2.c" 
 ..\src\Examen2.c: In function 'main':
-..\src\Examen2.c:38:25: warning: passing argument 1 of 'parser_libroFromText' from incompatible pointer type [-Wincompatible-pointer-types]
-   38 |    parser_libroFromText("libro.csv", pArrayListLibro);
-      |                         ^~~~~~~~~~~
-      |                         |
-      |                         char *
-In file included from ..\src\controller.h:7,
+..\src\Examen2.c:107:49: warning: passing argument 2 of 'll_count' from incompatible pointer type [-Wincompatible-pointer-types]
+  107 |    contadorQuinientos=ll_count(pArrayListLibro, libro_acumulador_contador, &acumuladorPearson);
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                 |
+      |                                                 float (*)(void *, float *)
+In file included from ..\src\controller.h:6,
                  from ..\src\Examen2.c:16:
-..\src\parser.h:6:32: note: expected 'FILE *' {aka 'struct _iobuf *'} but argument is of type 'char *'
-    6 | int parser_libroFromText(FILE* pFile, LinkedList* pArrayListLibro);
-      |                          ~~~~~~^~~~~
-..\src\Examen2.c:39:32: warning: passing argument 1 of 'parser_libroFromText' from incompatible pointer type [-Wincompatible-pointer-types]
-   39 |    testeo=parser_libroFromText("libro.csv", pArrayListLibro);
-      |                                ^~~~~~~~~~~
-      |                                |
-      |                                char *
-In file included from ..\src\controller.h:7,
-                 from ..\src\Examen2.c:16:
-..\src\parser.h:6:32: note: expected 'FILE *' {aka 'struct _iobuf *'} but argument is of type 'char *'
-    6 | int parser_libroFromText(FILE* pFile, LinkedList* pArrayListLibro);
-      |                          ~~~~~~^~~~~
-..\src\Examen2.c:40:7: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
-   40 |    if(testeo=1)
-      |       ^~~~~~
-..\src\Examen2.c:27:14: warning: variable 'pArrayListEditorial' set but not used [-Wunused-but-set-variable]
-   27 |  LinkedList* pArrayListEditorial=NULL;
-      |              ^~~~~~~~~~~~~~~~~~~
-..\src\Examen2.c:24:6: warning: unused variable 'flagMenu' [-Wunused-variable]
-   24 |  int flagMenu=-1;
-      |      ^~~~~~~~
-..\src\Examen2.c:23:6: warning: unused variable 'corroboracion' [-Wunused-variable]
-   23 |  int corroboracion;
-      |      ^~~~~~~~~~~~~
-..\src\Examen2.c:22:6: warning: unused variable 'auxId' [-Wunused-variable]
-   22 |  int auxId=300;
-      |      ^~~~~
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\libro.o" "..\\src\\libro.c" 
-..\src\libro.c: In function 'libro_sortByAutor':
-..\src\libro.c:204:6: warning: unused variable 'comparacion' [-Wunused-variable]
-  204 |  int comparacion= -1;
-      |      ^~~~~~~~~~~
+..\src\LinkedList.h:50:36: note: expected 'int (*)(void *, float *)' but argument is of type 'float (*)(void *, float *)'
+   50 | int ll_count(LinkedList* this,int(*fn)(void*,float*), float* pTotal);
+      |                               ~~~~~^~~~~~~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\editorial.o" "..\\src\\editorial.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\controller.o" "..\\src\\controller.c" 
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\General.o" "..\\src\\General.c" 
+..\src\General.c: In function 'pedirString':
+..\src\General.c:48:6: warning: unused variable 'auxiliar' [-Wunused-variable]
+   48 |  int auxiliar;
+      |      ^~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\parser.o" "..\\src\\parser.c" 
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
-..\src\LinkedList.c: In function 'll_filter':
-..\src\LinkedList.c:560:1: warning: control reaches end of non-void function [-Wreturn-type]
-  560 | }
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\libro.o" "..\\src\\libro.c" 
+gcc -o Examen2.exe "src\\Examen2.o" "src\\General.o" "src\\LinkedList.o" "src\\controller.o" "src\\editorial.o" "src\\libro.o" "src\\parser.o" 
+Info: Nothing to build for Examen2
+13:08:05 **** Incremental Build of configuration Debug for project Examen2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\General.o" "..\\src\\General.c" 
+..\src\General.c: In function 'pedirString':
+..\src\General.c:114:1: error: expected declaration or statement at end of input
+  114 | }
       | ^
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\controller.o" "..\\src\\controller.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\parser.o" "..\\src\\parser.c" 
-gcc -o Examen2.exe "src\\Examen2.o" "src\\General.o" "src\\LinkedList.o" "src\\controller.o" "src\\editorial.o" "src\\libro.o" "src\\parser.o" 
-14:23:27 **** Incremental Build of configuration Debug for project Examen2 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
-gcc -o Examen2.exe "src\\Examen2.o" "src\\General.o" "src\\LinkedList.o" "src\\controller.o" "src\\editorial.o" "src\\libro.o" "src\\parser.o" 
-14:23:46 **** Incremental Build of configuration Debug for project Examen2 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Examen2.o" "..\\src\\Examen2.c" 
-..\src\Examen2.c: In function 'main':
-..\src\Examen2.c:38:25: warning: passing argument 1 of 'parser_libroFromText' from incompatible pointer type [-Wincompatible-pointer-types]
-   38 |    parser_libroFromText("libro.csv", pArrayListLibro);
-      |                         ^~~~~~~~~~~
-      |                         |
-      |                         char *
-In file included from ..\src\controller.h:7,
-                 from ..\src\Examen2.c:16:
-..\src\parser.h:6:32: note: expected 'FILE *' {aka 'struct _iobuf *'} but argument is of type 'char *'
-    6 | int parser_libroFromText(FILE* pFile, LinkedList* pArrayListLibro);
-      |                          ~~~~~~^~~~~
-..\src\Examen2.c:39:32: warning: passing argument 1 of 'parser_libroFromText' from incompatible pointer type [-Wincompatible-pointer-types]
-   39 |    testeo=parser_libroFromText("libro.csv", pArrayListLibro);
-      |                                ^~~~~~~~~~~
-      |                                |
-      |                                char *
-In file included from ..\src\controller.h:7,
-                 from ..\src\Examen2.c:16:
-..\src\parser.h:6:32: note: expected 'FILE *' {aka 'struct _iobuf *'} but argument is of type 'char *'
-    6 | int parser_libroFromText(FILE* pFile, LinkedList* pArrayListLibro);
-      |                          ~~~~~~^~~~~
-..\src\Examen2.c:27:14: warning: variable 'pArrayListEditorial' set but not used [-Wunused-but-set-variable]
-   27 |  LinkedList* pArrayListEditorial=NULL;
-      |              ^~~~~~~~~~~~~~~~~~~
-..\src\Examen2.c:24:6: warning: unused variable 'flagMenu' [-Wunused-variable]
-   24 |  int flagMenu=-1;
-      |      ^~~~~~~~
-..\src\Examen2.c:23:6: warning: unused variable 'corroboracion' [-Wunused-variable]
-   23 |  int corroboracion;
-      |      ^~~~~~~~~~~~~
-..\src\Examen2.c:22:6: warning: unused variable 'auxId' [-Wunused-variable]
-   22 |  int auxId=300;
-      |      ^~~~~
-gcc -o Examen2.exe "src\\Examen2.o" "src\\General.o" "src\\LinkedList.o" "src\\controller.o" "src\\editorial.o" "src\\libro.o" "src\\parser.o" 
-14:23:56 **** Incremental Build of configuration Debug for project Examen2 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Examen2.o" "..\\src\\Examen2.c" 
-..\src\Examen2.c: In function 'main':
-..\src\Examen2.c:39:32: warning: passing argument 1 of 'parser_libroFromText' from incompatible pointer type [-Wincompatible-pointer-types]
-   39 |    testeo=parser_libroFromText("libro.csv", pArrayListLibro);
-      |                                ^~~~~~~~~~~
-      |                                |
-      |                                char *
-In file included from ..\src\controller.h:7,
-                 from ..\src\Examen2.c:16:
-..\src\parser.h:6:32: note: expected 'FILE *' {aka 'struct _iobuf *'} but argument is of type 'char *'
-    6 | int parser_libroFromText(FILE* pFile, LinkedList* pArrayListLibro);
-      |                          ~~~~~~^~~~~
-..\src\Examen2.c:27:14: warning: variable 'pArrayListEditorial' set but not used [-Wunused-but-set-variable]
-   27 |  LinkedList* pArrayListEditorial=NULL;
-      |              ^~~~~~~~~~~~~~~~~~~
-..\src\Examen2.c:24:6: warning: unused variable 'flagMenu' [-Wunused-variable]
-   24 |  int flagMenu=-1;
-      |      ^~~~~~~~
-..\src\Examen2.c:23:6: warning: unused variable 'corroboracion' [-Wunused-variable]
-   23 |  int corroboracion;
-      |      ^~~~~~~~~~~~~
-..\src\Examen2.c:22:6: warning: unused variable 'auxId' [-Wunused-variable]
-   22 |  int auxId=300;
-      |      ^~~~~
-gcc -o Examen2.exe "src\\Examen2.o" "src\\General.o" "src\\LinkedList.o" "src\\controller.o" "src\\editorial.o" "src\\libro.o" "src\\parser.o" 
-14:25:29 **** Incremental Build of configuration Debug for project Examen2 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Examen2.o" "..\\src\\Examen2.c" 
-..\src\Examen2.c: In function 'main':
-..\src\Examen2.c:27:14: warning: variable 'pArrayListEditorial' set but not used [-Wunused-but-set-variable]
-   27 |  LinkedList* pArrayListEditorial=NULL;
-      |              ^~~~~~~~~~~~~~~~~~~
-..\src\Examen2.c:24:6: warning: unused variable 'flagMenu' [-Wunused-variable]
-   24 |  int flagMenu=-1;
-      |      ^~~~~~~~
-..\src\Examen2.c:23:6: warning: unused variable 'corroboracion' [-Wunused-variable]
-   23 |  int corroboracion;
-      |      ^~~~~~~~~~~~~
-..\src\Examen2.c:22:6: warning: unused variable 'auxId' [-Wunused-variable]
-   22 |  int auxId=300;
-      |      ^~~~~
-gcc -o Examen2.exe "src\\Examen2.o" "src\\General.o" "src\\LinkedList.o" "src\\controller.o" "src\\editorial.o" "src\\libro.o" "src\\parser.o" 
-14:25:40 **** Incremental Build of configuration Debug for project Examen2 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Examen2.o" "..\\src\\Examen2.c" 
-..\src\Examen2.c: In function 'main':
-..\src\Examen2.c:27:14: warning: variable 'pArrayListEditorial' set but not used [-Wunused-but-set-variable]
-   27 |  LinkedList* pArrayListEditorial=NULL;
-      |              ^~~~~~~~~~~~~~~~~~~
-..\src\Examen2.c:24:6: warning: unused variable 'flagMenu' [-Wunused-variable]
-   24 |  int flagMenu=-1;
-      |      ^~~~~~~~
-..\src\Examen2.c:23:6: warning: unused variable 'corroboracion' [-Wunused-variable]
-   23 |  int corroboracion;
-      |      ^~~~~~~~~~~~~
-..\src\Examen2.c:22:6: warning: unused variable 'auxId' [-Wunused-variable]
-   22 |  int auxId=300;
-      |      ^~~~~
-gcc -o Examen2.exe "src\\Examen2.o" "src\\General.o" "src\\LinkedList.o" "src\\controller.o" "src\\editorial.o" "src\\libro.o" "src\\parser.o" 
-14:27:11 **** Incremental Build of configuration Debug for project Examen2 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Examen2.o" "..\\src\\Examen2.c" 
-..\src\Examen2.c: In function 'main':
-..\src\Examen2.c:27:14: warning: variable 'pArrayListEditorial' set but not used [-Wunused-but-set-variable]
-   27 |  LinkedList* pArrayListEditorial=NULL;
-      |              ^~~~~~~~~~~~~~~~~~~
-..\src\Examen2.c:25:6: warning: unused variable 'testeo' [-Wunused-variable]
-   25 |  int testeo;
-      |      ^~~~~~
-..\src\Examen2.c:24:6: warning: unused variable 'flagMenu' [-Wunused-variable]
-   24 |  int flagMenu=-1;
-      |      ^~~~~~~~
-..\src\Examen2.c:23:6: warning: unused variable 'corroboracion' [-Wunused-variable]
-   23 |  int corroboracion;
-      |      ^~~~~~~~~~~~~
-gcc -o Examen2.exe "src\\Examen2.o" "src\\General.o" "src\\LinkedList.o" "src\\controller.o" "src\\editorial.o" "src\\libro.o" "src\\parser.o" 
-14:27:27 **** Incremental Build of configuration Debug for project Examen2 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Examen2.o" "..\\src\\Examen2.c" 
-..\src\Examen2.c: In function 'main':
-..\src\Examen2.c:27:14: warning: variable 'pArrayListEditorial' set but not used [-Wunused-but-set-variable]
-   27 |  LinkedList* pArrayListEditorial=NULL;
-      |              ^~~~~~~~~~~~~~~~~~~
-..\src\Examen2.c:25:6: warning: unused variable 'testeo' [-Wunused-variable]
-   25 |  int testeo;
-      |      ^~~~~~
-..\src\Examen2.c:24:6: warning: unused variable 'flagMenu' [-Wunused-variable]
-   24 |  int flagMenu=-1;
-      |      ^~~~~~~~
-..\src\Examen2.c:23:6: warning: unused variable 'corroboracion' [-Wunused-variable]
-   23 |  int corroboracion;
-      |      ^~~~~~~~~~~~~
-gcc -o Examen2.exe "src\\Examen2.o" "src\\General.o" "src\\LinkedList.o" "src\\controller.o" "src\\editorial.o" "src\\libro.o" "src\\parser.o" 
-Info: Nothing to build for Examen2
-Info: Nothing to build for Examen2
-Info: Nothing to build for Examen2
-Info: Nothing to build for Examen2
-14:32:35 **** Incremental Build of configuration Debug for project Examen2 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\controller.o" "..\\src\\controller.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Examen2.o" "..\\src\\Examen2.c" 
-..\src\Examen2.c: In function 'main':
-..\src\Examen2.c:27:14: warning: variable 'pArrayListEditorial' set but not used [-Wunused-but-set-variable]
-   27 |  LinkedList* pArrayListEditorial=NULL;
-      |              ^~~~~~~~~~~~~~~~~~~
-..\src\Examen2.c:25:6: warning: unused variable 'testeo' [-Wunused-variable]
-   25 |  int testeo;
-      |      ^~~~~~
-..\src\Examen2.c:24:6: warning: unused variable 'flagMenu' [-Wunused-variable]
-   24 |  int flagMenu=-1;
-      |      ^~~~~~~~
-..\src\Examen2.c:23:6: warning: unused variable 'corroboracion' [-Wunused-variable]
-   23 |  int corroboracion;
-      |      ^~~~~~~~~~~~~
-gcc -o Examen2.exe "src\\Examen2.o" "src\\General.o" "src\\LinkedList.o" "src\\controller.o" "src\\editorial.o" "src\\libro.o" "src\\parser.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Examen2.exe: Permission denied
-collect2.exe: error: ld returned 1 exit status
-14:32:48 **** Incremental Build of configuration Debug for project Examen2 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Examen2.o" "..\\src\\Examen2.c" 
-..\src\Examen2.c: In function 'main':
-..\src\Examen2.c:26:14: warning: variable 'pArrayListLibro' set but not used [-Wunused-but-set-variable]
-   26 |  LinkedList* pArrayListLibro=NULL;
-      |              ^~~~~~~~~~~~~~~
-..\src\Examen2.c:25:6: warning: unused variable 'testeo' [-Wunused-variable]
-   25 |  int testeo;
-      |      ^~~~~~
-..\src\Examen2.c:24:6: warning: unused variable 'flagMenu' [-Wunused-variable]
-   24 |  int flagMenu=-1;
-      |      ^~~~~~~~
-..\src\Examen2.c:23:6: warning: unused variable 'corroboracion' [-Wunused-variable]
-   23 |  int corroboracion;
-      |      ^~~~~~~~~~~~~
-gcc -o Examen2.exe "src\\Examen2.o" "src\\General.o" "src\\LinkedList.o" "src\\controller.o" "src\\editorial.o" "src\\libro.o" "src\\parser.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Examen2.exe: Permission denied
-collect2.exe: error: ld returned 1 exit status
-14:33:28 **** Incremental Build of configuration Debug for project Examen2 ****
-Info: Internal Builder is used for build
-gcc -o Examen2.exe "src\\Examen2.o" "src\\General.o" "src\\LinkedList.o" "src\\controller.o" "src\\editorial.o" "src\\libro.o" "src\\parser.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Examen2.exe: Permission denied
-collect2.exe: error: ld returned 1 exit status
-14:34:07 **** Incremental Build of configuration Debug for project Examen2 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Examen2.o" "..\\src\\Examen2.c" 
-..\src\Examen2.c: In function 'main':
-..\src\Examen2.c:27:14: warning: variable 'pArrayListEditorial' set but not used [-Wunused-but-set-variable]
-   27 |  LinkedList* pArrayListEditorial=NULL;
-      |              ^~~~~~~~~~~~~~~~~~~
-..\src\Examen2.c:25:6: warning: unused variable 'testeo' [-Wunused-variable]
-   25 |  int testeo;
-      |      ^~~~~~
-..\src\Examen2.c:24:6: warning: unused variable 'flagMenu' [-Wunused-variable]
-   24 |  int flagMenu=-1;
-      |      ^~~~~~~~
-..\src\Examen2.c:23:6: warning: unused variable 'corroboracion' [-Wunused-variable]
-   23 |  int corroboracion;
-      |      ^~~~~~~~~~~~~
-gcc -o Examen2.exe "src\\Examen2.o" "src\\General.o" "src\\LinkedList.o" "src\\controller.o" "src\\editorial.o" "src\\libro.o" "src\\parser.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Examen2.exe: Permission denied
-collect2.exe: error: ld returned 1 exit status
-14:34:50 **** Incremental Build of configuration Debug for project Examen2 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Examen2.o" "..\\src\\Examen2.c" 
-..\src\Examen2.c: In function 'main':
-..\src\Examen2.c:27:14: warning: variable 'pArrayListEditorial' set but not used [-Wunused-but-set-variable]
-   27 |  LinkedList* pArrayListEditorial=NULL;
-      |              ^~~~~~~~~~~~~~~~~~~
-..\src\Examen2.c:25:6: warning: unused variable 'testeo' [-Wunused-variable]
-   25 |  int testeo;
-      |      ^~~~~~
-..\src\Examen2.c:24:6: warning: unused variable 'flagMenu' [-Wunused-variable]
-   24 |  int flagMenu=-1;
-      |      ^~~~~~~~
-..\src\Examen2.c:23:6: warning: unused variable 'corroboracion' [-Wunused-variable]
-   23 |  int corroboracion;
-      |      ^~~~~~~~~~~~~
-gcc -o Examen2.exe "src\\Examen2.o" "src\\General.o" "src\\LinkedList.o" "src\\controller.o" "src\\editorial.o" "src\\libro.o" "src\\parser.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Examen2.exe: Permission denied
-collect2.exe: error: ld returned 1 exit status
-14:35:00 **** Incremental Build of configuration Debug for project Examen2 ****
-Info: Internal Builder is used for build
-gcc -o Examen2.exe "src\\Examen2.o" "src\\General.o" "src\\LinkedList.o" "src\\controller.o" "src\\editorial.o" "src\\libro.o" "src\\parser.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Examen2.exe: Permission denied
-collect2.exe: error: ld returned 1 exit status
-14:35:05 **** Incremental Build of configuration Debug for project Examen2 ****
-Info: Internal Builder is used for build
-gcc -o Examen2.exe "src\\Examen2.o" "src\\General.o" "src\\LinkedList.o" "src\\controller.o" "src\\editorial.o" "src\\libro.o" "src\\parser.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Examen2.exe: Permission denied
-collect2.exe: error: ld returned 1 exit status
-14:35:16 **** Incremental Build of configuration Debug for project Examen2 ****
-Info: Internal Builder is used for build
-gcc -o Examen2.exe "src\\Examen2.o" "src\\General.o" "src\\LinkedList.o" "src\\controller.o" "src\\editorial.o" "src\\libro.o" "src\\parser.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Examen2.exe: Permission denied
-collect2.exe: error: ld returned 1 exit status
-14:37:32 **** Incremental Build of configuration Debug for project Examen2 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\parser.o" "..\\src\\parser.c" 
-gcc -o Examen2.exe "src\\Examen2.o" "src\\General.o" "src\\LinkedList.o" "src\\controller.o" "src\\editorial.o" "src\\libro.o" "src\\parser.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Examen2.exe: Permission denied
-collect2.exe: error: ld returned 1 exit status
-14:38:41 **** Incremental Build of configuration Debug for project Examen2 ****
-Info: Internal Builder is used for build
-gcc -o Examen2.exe "src\\Examen2.o" "src\\General.o" "src\\LinkedList.o" "src\\controller.o" "src\\editorial.o" "src\\libro.o" "src\\parser.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Examen2.exe: Permission denied
-collect2.exe: error: ld returned 1 exit status
-14:39:08 **** Incremental Build of configuration Debug for project Examen2 ****
-Info: Internal Builder is used for build
-gcc -o Examen2.exe "src\\Examen2.o" "src\\General.o" "src\\LinkedList.o" "src\\controller.o" "src\\editorial.o" "src\\libro.o" "src\\parser.o" 
-14:39:50 **** Incremental Build of configuration Debug for project Examen2 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Examen2.o" "..\\src\\Examen2.c" 
-..\src\Examen2.c: In function 'main':
-..\src\Examen2.c:38:31: warning: passing argument 1 of 'parser_libroFromText' from incompatible pointer type [-Wincompatible-pointer-types]
-   38 |    auxId=parser_libroFromText("libro.csv", pArrayListLibro);
-      |                               ^~~~~~~~~~~
-      |                               |
-      |                               char *
-In file included from ..\src\controller.h:7,
-                 from ..\src\Examen2.c:16:
-..\src\parser.h:6:32: note: expected 'FILE *' {aka 'struct _iobuf *'} but argument is of type 'char *'
-    6 | int parser_libroFromText(FILE* pFile, LinkedList* pArrayListLibro);
-      |                          ~~~~~~^~~~~
-..\src\Examen2.c:27:14: warning: variable 'pArrayListEditorial' set but not used [-Wunused-but-set-variable]
-   27 |  LinkedList* pArrayListEditorial=NULL;
-      |              ^~~~~~~~~~~~~~~~~~~
-..\src\Examen2.c:25:6: warning: unused variable 'testeo' [-Wunused-variable]
-   25 |  int testeo;
-      |      ^~~~~~
-..\src\Examen2.c:24:6: warning: unused variable 'flagMenu' [-Wunused-variable]
-   24 |  int flagMenu=-1;
-      |      ^~~~~~~~
-..\src\Examen2.c:23:6: warning: unused variable 'corroboracion' [-Wunused-variable]
-   23 |  int corroboracion;
-      |      ^~~~~~~~~~~~~
-gcc -o Examen2.exe "src\\Examen2.o" "src\\General.o" "src\\LinkedList.o" "src\\controller.o" "src\\editorial.o" "src\\libro.o" "src\\parser.o" 
-Info: Nothing to build for Examen2
-14:41:00 **** Incremental Build of configuration Debug for project Examen2 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Examen2.o" "..\\src\\Examen2.c" 
-..\src\Examen2.c: In function 'main':
-..\src\Examen2.c:27:14: warning: variable 'pArrayListEditorial' set but not used [-Wunused-but-set-variable]
-   27 |  LinkedList* pArrayListEditorial=NULL;
-      |              ^~~~~~~~~~~~~~~~~~~
-..\src\Examen2.c:25:6: warning: unused variable 'testeo' [-Wunused-variable]
-   25 |  int testeo;
-      |      ^~~~~~
-..\src\Examen2.c:24:6: warning: unused variable 'flagMenu' [-Wunused-variable]
-   24 |  int flagMenu=-1;
-      |      ^~~~~~~~
-..\src\Examen2.c:23:6: warning: unused variable 'corroboracion' [-Wunused-variable]
-   23 |  int corroboracion;
-      |      ^~~~~~~~~~~~~
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\controller.o" "..\\src\\controller.c" 
-gcc -o Examen2.exe "src\\Examen2.o" "src\\General.o" "src\\LinkedList.o" "src\\controller.o" "src\\editorial.o" "src\\libro.o" "src\\parser.o" 
-14:42:10 **** Incremental Build of configuration Debug for project Examen2 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\controller.o" "..\\src\\controller.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Examen2.o" "..\\src\\Examen2.c" 
-..\src\Examen2.c: In function 'main':
-..\src\Examen2.c:25:6: warning: unused variable 'testeo' [-Wunused-variable]
-   25 |  int testeo;
-      |      ^~~~~~
-..\src\Examen2.c:24:6: warning: unused variable 'flagMenu' [-Wunused-variable]
-   24 |  int flagMenu=-1;
-      |      ^~~~~~~~
-..\src\Examen2.c:23:6: warning: unused variable 'corroboracion' [-Wunused-variable]
-   23 |  int corroboracion;
-      |      ^~~~~~~~~~~~~
-gcc -o Examen2.exe "src\\Examen2.o" "src\\General.o" "src\\LinkedList.o" "src\\controller.o" "src\\editorial.o" "src\\libro.o" "src\\parser.o" 
-14:51:02 **** Incremental Build of configuration Debug for project Examen2 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\parser.o" "..\\src\\parser.c" 
-gcc -o Examen2.exe "src\\Examen2.o" "src\\General.o" "src\\LinkedList.o" "src\\controller.o" "src\\editorial.o" "src\\libro.o" "src\\parser.o" 
-14:52:03 **** Incremental Build of configuration Debug for project Examen2 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\parser.o" "..\\src\\parser.c" 
-gcc -o Examen2.exe "src\\Examen2.o" "src\\General.o" "src\\LinkedList.o" "src\\controller.o" "src\\editorial.o" "src\\libro.o" "src\\parser.o" 
-14:57:05 **** Rebuild of configuration Debug for project Examen2 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Examen2.o" "..\\src\\Examen2.c" 
-..\src\Examen2.c: In function 'main':
-..\src\Examen2.c:27:14: warning: variable 'pArrayListEditorial' set but not used [-Wunused-but-set-variable]
-   27 |  LinkedList* pArrayListEditorial=NULL;
-      |              ^~~~~~~~~~~~~~~~~~~
-..\src\Examen2.c:25:6: warning: unused variable 'testeo' [-Wunused-variable]
-   25 |  int testeo;
-      |      ^~~~~~
-..\src\Examen2.c:24:6: warning: unused variable 'flagMenu' [-Wunused-variable]
-   24 |  int flagMenu=-1;
-      |      ^~~~~~~~
-..\src\Examen2.c:23:6: warning: unused variable 'corroboracion' [-Wunused-variable]
-   23 |  int corroboracion;
-      |      ^~~~~~~~~~~~~
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\controller.o" "..\\src\\controller.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\editorial.o" "..\\src\\editorial.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\libro.o" "..\\src\\libro.c" 
-..\src\libro.c: In function 'libro_sortByAutor':
-..\src\libro.c:204:6: warning: unused variable 'comparacion' [-Wunused-variable]
-  204 |  int comparacion= -1;
-      |      ^~~~~~~~~~~
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\General.o" "..\\src\\General.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\parser.o" "..\\src\\parser.c" 
-gcc -o Examen2.exe "src\\Examen2.o" "src\\General.o" "src\\LinkedList.o" "src\\controller.o" "src\\editorial.o" "src\\libro.o" "src\\parser.o" 
-14:59:50 **** Incremental Build of configuration Debug for project Examen2 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\parser.o" "..\\src\\parser.c" 
-gcc -o Examen2.exe "src\\Examen2.o" "src\\General.o" "src\\LinkedList.o" "src\\controller.o" "src\\editorial.o" "src\\libro.o" "src\\parser.o" 
-15:00:24 **** Incremental Build of configuration Debug for project Examen2 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\parser.o" "..\\src\\parser.c" 
-gcc -o Examen2.exe "src\\Examen2.o" "src\\General.o" "src\\LinkedList.o" "src\\controller.o" "src\\editorial.o" "src\\libro.o" "src\\parser.o" 
-15:01:42 **** Incremental Build of configuration Debug for project Examen2 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\controller.o" "..\\src\\controller.c" 
-gcc -o Examen2.exe "src\\Examen2.o" "src\\General.o" "src\\LinkedList.o" "src\\controller.o" "src\\editorial.o" "src\\libro.o" "src\\parser.o" 
-15:02:37 **** Incremental Build of configuration Debug for project Examen2 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Examen2.o" "..\\src\\Examen2.c" 
-..\src\Examen2.c: In function 'main':
-..\src\Examen2.c:27:14: warning: variable 'pArrayListEditorial' set but not used [-Wunused-but-set-variable]
-   27 |  LinkedList* pArrayListEditorial=NULL;
-      |              ^~~~~~~~~~~~~~~~~~~
-..\src\Examen2.c:25:6: warning: unused variable 'testeo' [-Wunused-variable]
-   25 |  int testeo;
-      |      ^~~~~~
-..\src\Examen2.c:24:6: warning: unused variable 'flagMenu' [-Wunused-variable]
-   24 |  int flagMenu=-1;
-      |      ^~~~~~~~
-..\src\Examen2.c:23:6: warning: unused variable 'corroboracion' [-Wunused-variable]
-   23 |  int corroboracion;
-      |      ^~~~~~~~~~~~~
-gcc -o Examen2.exe "src\\Examen2.o" "src\\General.o" "src\\LinkedList.o" "src\\controller.o" "src\\editorial.o" "src\\libro.o" "src\\parser.o" 
-15:04:46 **** Incremental Build of configuration Debug for project Examen2 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\parser.o" "..\\src\\parser.c" 
-gcc -o Examen2.exe "src\\Examen2.o" "src\\General.o" "src\\LinkedList.o" "src\\controller.o" "src\\editorial.o" "src\\libro.o" "src\\parser.o" 
-15:08:01 **** Incremental Build of configuration Debug for project Examen2 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\controller.o" "..\\src\\controller.c" 
-..\src\controller.c: In function 'controller_loadFromText':
-..\src\controller.c:92:5: warning: implicit declaration of function 'parser_LibrosFromText'; did you mean 'parser_libroFromText'? [-Wimplicit-function-declaration]
-   92 |     parser_LibrosFromText(pFile ,pll_listaLibros);
-      |     ^~~~~~~~~~~~~~~~~~~~~
-      |     parser_libroFromText
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\parser.o" "..\\src\\parser.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Examen2.o" "..\\src\\Examen2.c" 
-..\src\Examen2.c: In function 'main':
-..\src\Examen2.c:25:6: warning: unused variable 'testeo' [-Wunused-variable]
-   25 |  int testeo;
-      |      ^~~~~~
-..\src\Examen2.c:24:6: warning: unused variable 'flagMenu' [-Wunused-variable]
-   24 |  int flagMenu=-1;
-      |      ^~~~~~~~
-..\src\Examen2.c:23:6: warning: unused variable 'corroboracion' [-Wunused-variable]
-   23 |  int corroboracion;
-      |      ^~~~~~~~~~~~~
-gcc -o Examen2.exe "src\\Examen2.o" "src\\General.o" "src\\LinkedList.o" "src\\controller.o" "src\\editorial.o" "src\\libro.o" "src\\parser.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\controller.o: in function `controller_loadFromText':
-C:\Users\brake\Desktop\Examen lab 2\Examen2\Debug/../src/controller.c:92: undefined reference to `parser_LibrosFromText'
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: C:\Users\brake\Desktop\Examen lab 2\Examen2\Debug/../src/controller.c:101: undefined reference to `parser_LibrosFromText'
-collect2.exe: error: ld returned 1 exit status
-15:08:58 **** Incremental Build of configuration Debug for project Examen2 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\controller.o" "..\\src\\controller.c" 
-..\src\controller.c: In function 'controller_loadFromText':
-..\src\controller.c:101:5: warning: implicit declaration of function 'parser_LibrosFromText'; did you mean 'parser_libroFromText'? [-Wimplicit-function-declaration]
-  101 |     parser_LibrosFromText(pFile,pll_ListaEditorales);
-      |     ^~~~~~~~~~~~~~~~~~~~~
-      |     parser_libroFromText
-gcc -o Examen2.exe "src\\Examen2.o" "src\\General.o" "src\\LinkedList.o" "src\\controller.o" "src\\editorial.o" "src\\libro.o" "src\\parser.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\controller.o: in function `controller_loadFromText':
-C:\Users\brake\Desktop\Examen lab 2\Examen2\Debug/../src/controller.c:101: undefined reference to `parser_LibrosFromText'
-collect2.exe: error: ld returned 1 exit status
-15:09:34 **** Incremental Build of configuration Debug for project Examen2 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\controller.o" "..\\src\\controller.c" 
-gcc -o Examen2.exe "src\\Examen2.o" "src\\General.o" "src\\LinkedList.o" "src\\controller.o" "src\\editorial.o" "src\\libro.o" "src\\parser.o" 
-15:10:54 **** Incremental Build of configuration Debug for project Examen2 ****
+At top level:
+..\src\General.c:104:6: warning: 'MensajeDeError' defined but not used [-Wunused-function]
+  104 | void MensajeDeError(int corroboracion, char mensaje[], char mensajeError[])
+      |      ^~~~~~~~~~~~~~
+..\src\General.c:84:5: warning: 'validacionString' defined but not used [-Wunused-function]
+   84 | int validacionString(char array[])
+      |     ^~~~~~~~~~~~~~~~
+..\src\General.c:68:6: warning: 'lowerToUpper' defined but not used [-Wunused-function]
+   68 | void lowerToUpper(char array[])
+      |      ^~~~~~~~~~~~
+13:08:44 **** Incremental Build of configuration Debug for project Examen2 ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\General.o" "..\\src\\General.c" 
 ..\src\General.c: In function 'pedirString':
-..\src\General.c:47:18: error: 'stringAuxiliar' undeclared (first use in this function)
-   47 |   scanf("%[^\n]",stringAuxiliar);
-      |                  ^~~~~~~~~~~~~~
-..\src\General.c:47:18: note: each undeclared identifier is reported only once for each function it appears in
-..\src\General.c:48:12: warning: implicit declaration of function 'ValidacionDeStrings'; did you mean 'validacionString'? [-Wimplicit-function-declaration]
-   48 |   auxiliar=ValidacionDeStrings(stringAuxiliar);
-      |            ^~~~~~~~~~~~~~~~~~~
-      |            validacionString
-..\src\General.c:49:3: warning: implicit declaration of function 'UpperLower' [-Wimplicit-function-declaration]
-   49 |   UpperLower(stringAuxiliar);
-      |   ^~~~~~~~~~
-15:11:33 **** Incremental Build of configuration Debug for project Examen2 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\General.o" "..\\src\\General.c" 
-..\src\General.c: In function 'pedirString':
-..\src\General.c:48:12: warning: implicit declaration of function 'ValidacionDeStrings'; did you mean 'validacionString'? [-Wimplicit-function-declaration]
-   48 |   auxiliar=ValidacionDeStrings(stringIngresado);
-      |            ^~~~~~~~~~~~~~~~~~~
-      |            validacionString
-..\src\General.c:49:3: warning: implicit declaration of function 'UpperLower' [-Wimplicit-function-declaration]
-   49 |   UpperLower(stringIngresado);
-      |   ^~~~~~~~~~
-gcc -o Examen2.exe "src\\Examen2.o" "src\\General.o" "src\\LinkedList.o" "src\\controller.o" "src\\editorial.o" "src\\libro.o" "src\\parser.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\General.o: in function `pedirString':
-C:\Users\brake\Desktop\Examen lab 2\Examen2\Debug/../src/General.c:48: undefined reference to `ValidacionDeStrings'
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: C:\Users\brake\Desktop\Examen lab 2\Examen2\Debug/../src/General.c:49: undefined reference to `UpperLower'
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: C:\Users\brake\Desktop\Examen lab 2\Examen2\Debug/../src/General.c:55: undefined reference to `ValidacionDeStrings'
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: C:\Users\brake\Desktop\Examen lab 2\Examen2\Debug/../src/General.c:56: undefined reference to `UpperLower'
-collect2.exe: error: ld returned 1 exit status
-15:11:58 **** Incremental Build of configuration Debug for project Examen2 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\General.o" "..\\src\\General.c" 
-..\src\General.c: In function 'pedirString':
-..\src\General.c:55:13: warning: implicit declaration of function 'ValidacionDeStrings'; did you mean 'validacionString'? [-Wimplicit-function-declaration]
-   55 |    auxiliar=ValidacionDeStrings(stringIngresado);
-      |             ^~~~~~~~~~~~~~~~~~~
-      |             validacionString
-..\src\General.c:56:4: warning: implicit declaration of function 'UpperLower' [-Wimplicit-function-declaration]
-   56 |    UpperLower(stringIngresado);
-      |    ^~~~~~~~~~
-gcc -o Examen2.exe "src\\Examen2.o" "src\\General.o" "src\\LinkedList.o" "src\\controller.o" "src\\editorial.o" "src\\libro.o" "src\\parser.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\General.o: in function `pedirString':
-C:\Users\brake\Desktop\Examen lab 2\Examen2\Debug/../src/General.c:55: undefined reference to `ValidacionDeStrings'
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: C:\Users\brake\Desktop\Examen lab 2\Examen2\Debug/../src/General.c:56: undefined reference to `UpperLower'
-collect2.exe: error: ld returned 1 exit status
-15:12:13 **** Incremental Build of configuration Debug for project Examen2 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\General.o" "..\\src\\General.c" 
-..\src\General.c: In function 'pedirString':
-..\src\General.c:56:4: warning: implicit declaration of function 'UpperLower' [-Wimplicit-function-declaration]
-   56 |    UpperLower(stringIngresado);
-      |    ^~~~~~~~~~
-gcc -o Examen2.exe "src\\Examen2.o" "src\\General.o" "src\\LinkedList.o" "src\\controller.o" "src\\editorial.o" "src\\libro.o" "src\\parser.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\General.o: in function `pedirString':
-C:\Users\brake\Desktop\Examen lab 2\Examen2\Debug/../src/General.c:56: undefined reference to `UpperLower'
-collect2.exe: error: ld returned 1 exit status
-15:12:23 **** Incremental Build of configuration Debug for project Examen2 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\General.o" "..\\src\\General.c" 
-gcc -o Examen2.exe "src\\Examen2.o" "src\\General.o" "src\\LinkedList.o" "src\\controller.o" "src\\editorial.o" "src\\libro.o" "src\\parser.o" 
-15:12:42 **** Incremental Build of configuration Debug for project Examen2 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\General.o" "..\\src\\General.c" 
-..\src\General.c: In function 'pedirString':
-..\src\General.c:50:8: warning: 'auxiliar' is used uninitialized in this function [-Wuninitialized]
-   50 |   while(auxiliar==-1)
+..\src\General.c:54:8: warning: 'auxiliar' is used uninitialized in this function [-Wuninitialized]
+   54 |   while(auxiliar==-1)
       |        ^
 gcc -o Examen2.exe "src\\Examen2.o" "src\\General.o" "src\\LinkedList.o" "src\\controller.o" "src\\editorial.o" "src\\libro.o" "src\\parser.o" 
-15:13:54 **** Incremental Build of configuration Debug for project Examen2 ****
+13:09:40 **** Incremental Build of configuration Debug for project Examen2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Examen2.o" "..\\src\\Examen2.c" 
+..\src\Examen2.c: In function 'main':
+..\src\Examen2.c:107:49: warning: passing argument 2 of 'll_count' from incompatible pointer type [-Wincompatible-pointer-types]
+  107 |    contadorQuinientos=ll_count(pArrayListLibro, libro_acumulador_contador, &acumuladorPearson);
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                 |
+      |                                                 float (*)(void *, float *)
+In file included from ..\src\controller.h:6,
+                 from ..\src\Examen2.c:16:
+..\src\LinkedList.h:50:36: note: expected 'int (*)(void *, float *)' but argument is of type 'float (*)(void *, float *)'
+   50 | int ll_count(LinkedList* this,int(*fn)(void*,float*), float* pTotal);
+      |                               ~~~~~^~~~~~~~~~~~~~~~~
+gcc -o Examen2.exe "src\\Examen2.o" "src\\General.o" "src\\LinkedList.o" "src\\controller.o" "src\\editorial.o" "src\\libro.o" "src\\parser.o" 
+13:11:31 **** Incremental Build of configuration Debug for project Examen2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Examen2.o" "..\\src\\Examen2.c" 
+..\src\Examen2.c: In function 'main':
+..\src\Examen2.c:107:48: warning: passing argument 2 of 'll_count' from incompatible pointer type [-Wincompatible-pointer-types]
+  107 |    contadorQuinientos=ll_count(pArrayListLibro,libro_acumulador_contador,&acumuladorPearson);
+      |                                                ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                |
+      |                                                float (*)(void *, float *)
+In file included from ..\src\controller.h:6,
+                 from ..\src\Examen2.c:16:
+..\src\LinkedList.h:50:36: note: expected 'int (*)(void *, float *)' but argument is of type 'float (*)(void *, float *)'
+   50 | int ll_count(LinkedList* this,int(*fn)(void*,float*), float* pTotal);
+      |                               ~~~~~^~~~~~~~~~~~~~~~~
+gcc -o Examen2.exe "src\\Examen2.o" "src\\General.o" "src\\LinkedList.o" "src\\controller.o" "src\\editorial.o" "src\\libro.o" "src\\parser.o" 
+13:12:17 **** Incremental Build of configuration Debug for project Examen2 ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\controller.o" "..\\src\\controller.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\parser.o" "..\\src\\parser.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Examen2.o" "..\\src\\Examen2.c" 
+..\src\Examen2.c: In function 'main':
+..\src\Examen2.c:107:48: warning: passing argument 2 of 'll_count' from incompatible pointer type [-Wincompatible-pointer-types]
+  107 |    contadorQuinientos=ll_count(pArrayListLibro,libro_acumulador_contador,&acumuladorPearson);
+      |                                                ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                |
+      |                                                float (*)(void *, float *)
+In file included from ..\src\controller.h:6,
+                 from ..\src\Examen2.c:16:
+..\src\LinkedList.h:50:38: note: expected 'int (*)(void *, float *)' but argument is of type 'float (*)(void *, float *)'
+   50 | int ll_count(LinkedList* this, int (*fn)(void*,float*),float* pTotal);
+      |                                ~~~~~~^~~~~~~~~~~~~~~~~
 gcc -o Examen2.exe "src\\Examen2.o" "src\\General.o" "src\\LinkedList.o" "src\\controller.o" "src\\editorial.o" "src\\libro.o" "src\\parser.o" 
-18:40:10 **** Incremental Build of configuration Debug for project Examen2 ****
+13:12:39 **** Incremental Build of configuration Debug for project Examen2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\parser.o" "..\\src\\parser.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\controller.o" "..\\src\\controller.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\libro.o" "..\\src\\libro.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Examen2.o" "..\\src\\Examen2.c" 
+gcc -o Examen2.exe "src\\Examen2.o" "src\\General.o" "src\\LinkedList.o" "src\\controller.o" "src\\editorial.o" "src\\libro.o" "src\\parser.o" 
+13:13:12 **** Incremental Build of configuration Debug for project Examen2 ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Examen2.o" "..\\src\\Examen2.c" 
-..\src\Examen2.c: In function 'main':
-..\src\Examen2.c:40:39: error: incomplete universal character name \U
-   40 |    auxId=controller_loadLibroFromText("C:\Users\brake\Desktop\Examen lab 2\Examen2\src", pArrayListLibro);
-      |                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-..\src\Examen2.c:40:39: warning: unknown escape sequence: '\D'
-..\src\Examen2.c:40:39: warning: unknown escape sequence: '\s'
-..\src\Examen2.c:27:14: warning: variable 'pArrayListEditorial' set but not used [-Wunused-but-set-variable]
-   27 |  LinkedList* pArrayListEditorial=NULL;
-      |              ^~~~~~~~~~~~~~~~~~~
-..\src\Examen2.c:25:6: warning: unused variable 'testeo' [-Wunused-variable]
-   25 |  int testeo;
-      |      ^~~~~~
-..\src\Examen2.c:24:6: warning: unused variable 'flagMenu' [-Wunused-variable]
-   24 |  int flagMenu=-1;
-      |      ^~~~~~~~
-..\src\Examen2.c:23:6: warning: unused variable 'corroboracion' [-Wunused-variable]
-   23 |  int corroboracion;
-      |      ^~~~~~~~~~~~~
-18:40:44 **** Incremental Build of configuration Debug for project Examen2 ****
+gcc -o Examen2.exe "src\\Examen2.o" "src\\General.o" "src\\LinkedList.o" "src\\controller.o" "src\\editorial.o" "src\\libro.o" "src\\parser.o" 
+13:18:09 **** Incremental Build of configuration Debug for project Examen2 ****
 Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\libro.o" "..\\src\\libro.c" 
+gcc -o Examen2.exe "src\\Examen2.o" "src\\General.o" "src\\LinkedList.o" "src\\controller.o" "src\\editorial.o" "src\\libro.o" "src\\parser.o" 
+Info: Nothing to build for Examen2
+13:27:46 **** Incremental Build of configuration Debug for project Examen2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\libro.o" "..\\src\\libro.c" 
+gcc -o Examen2.exe "src\\Examen2.o" "src\\General.o" "src\\LinkedList.o" "src\\controller.o" "src\\editorial.o" "src\\libro.o" "src\\parser.o" 
+13:29:20 **** Incremental Build of configuration Debug for project Examen2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\libro.o" "..\\src\\libro.c" 
+gcc -o Examen2.exe "src\\Examen2.o" "src\\General.o" "src\\LinkedList.o" "src\\controller.o" "src\\editorial.o" "src\\libro.o" "src\\parser.o" 
+16:30:50 **** Rebuild of configuration Debug for project Examen2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\libro.o" "..\\src\\libro.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\controller.o" "..\\src\\controller.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\editorial.o" "..\\src\\editorial.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\parser.o" "..\\src\\parser.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\General.o" "..\\src\\General.c" 
+..\src\General.c: In function 'pedirString':
+..\src\General.c:54:8: warning: 'auxiliar' is used uninitialized in this function [-Wuninitialized]
+   54 |   while(auxiliar==-1)
+      |        ^
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Examen2.o" "..\\src\\Examen2.c" 
 ..\src\Examen2.c: In function 'main':
-..\src\Examen2.c:40:39: error: incomplete universal character name \U
-   40 |    auxId=controller_loadLibroFromText("C:\Users\brake\Desktop\Examen lab 2\Examen2\src\editorial.csv", pArrayListLibro);
-      |                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-..\src\Examen2.c:40:39: warning: unknown escape sequence: '\D'
-..\src\Examen2.c:40:39: warning: unknown escape sequence: '\s'
-..\src\Examen2.c:27:14: warning: variable 'pArrayListEditorial' set but not used [-Wunused-but-set-variable]
-   27 |  LinkedList* pArrayListEditorial=NULL;
-      |              ^~~~~~~~~~~~~~~~~~~
-..\src\Examen2.c:25:6: warning: unused variable 'testeo' [-Wunused-variable]
-   25 |  int testeo;
-      |      ^~~~~~
-..\src\Examen2.c:24:6: warning: unused variable 'flagMenu' [-Wunused-variable]
-   24 |  int flagMenu=-1;
-      |      ^~~~~~~~
-..\src\Examen2.c:23:6: warning: unused variable 'corroboracion' [-Wunused-variable]
-   23 |  int corroboracion;
-      |      ^~~~~~~~~~~~~
-18:40:56 **** Incremental Build of configuration Debug for project Examen2 ****
+..\src\Examen2.c:28:7: warning: unused variable 'archivo2' [-Wunused-variable]
+   28 |  char archivo2[200]="C:\\Users\\brake\\Desktop\\Examen lab 2\\Examen2\\src\\Editorial.csv";
+      |       ^~~~~~~~
+..\src\Examen2.c:27:7: warning: unused variable 'archivo1' [-Wunused-variable]
+   27 |  char archivo1[200]="C:\\Users\\brake\\Desktop\\Examen lab 2\\Examen2\\src\\Libro.csv";
+      |       ^~~~~~~~
+..\src\Examen2.c:23:7: warning: unused variable 'nombreEditorial' [-Wunused-variable]
+   23 |  char nombreEditorial[50]="Editorial.csv";
+      |       ^~~~~~~~~~~~~~~
+..\src\Examen2.c:22:7: warning: unused variable 'nombreLibro' [-Wunused-variable]
+   22 |  char nombreLibro[50]="Libro.csv";
+      |       ^~~~~~~~~~~
+gcc -o Examen2.exe "src\\Examen2.o" "src\\General.o" "src\\LinkedList.o" "src\\controller.o" "src\\editorial.o" "src\\libro.o" "src\\parser.o" 
+16:31:35 **** Incremental Build of configuration Debug for project Examen2 ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Examen2.o" "..\\src\\Examen2.c" 
-..\src\Examen2.c: In function 'main':
-..\src\Examen2.c:40:39: error: incomplete universal character name \U
-   40 |    auxId=controller_loadLibroFromText("C:\Users\brake\Desktop\Examen lab 2\Examen2\src\editorial.csv", pArrayListLibro);
-      |                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-..\src\Examen2.c:40:39: warning: unknown escape sequence: '\D'
-..\src\Examen2.c:40:39: warning: unknown escape sequence: '\s'
-..\src\Examen2.c:27:14: warning: variable 'pArrayListEditorial' set but not used [-Wunused-but-set-variable]
-   27 |  LinkedList* pArrayListEditorial=NULL;
-      |              ^~~~~~~~~~~~~~~~~~~
-..\src\Examen2.c:25:6: warning: unused variable 'testeo' [-Wunused-variable]
-   25 |  int testeo;
-      |      ^~~~~~
-..\src\Examen2.c:24:6: warning: unused variable 'flagMenu' [-Wunused-variable]
-   24 |  int flagMenu=-1;
-      |      ^~~~~~~~
-..\src\Examen2.c:23:6: warning: unused variable 'corroboracion' [-Wunused-variable]
-   23 |  int corroboracion;
-      |      ^~~~~~~~~~~~~
-18:49:11 **** Incremental Build of configuration Debug for project Examen2 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Examen2.o" "..\\src\\Examen2.c" 
-..\src\Examen2.c: In function 'main':
-..\src\Examen2.c:27:14: warning: variable 'pArrayListEditorial' set but not used [-Wunused-but-set-variable]
-   27 |  LinkedList* pArrayListEditorial=NULL;
-      |              ^~~~~~~~~~~~~~~~~~~
-..\src\Examen2.c:25:6: warning: unused variable 'testeo' [-Wunused-variable]
-   25 |  int testeo;
-      |      ^~~~~~
-..\src\Examen2.c:24:6: warning: unused variable 'flagMenu' [-Wunused-variable]
-   24 |  int flagMenu=-1;
-      |      ^~~~~~~~
-..\src\Examen2.c:23:6: warning: unused variable 'corroboracion' [-Wunused-variable]
-   23 |  int corroboracion;
-      |      ^~~~~~~~~~~~~
 gcc -o Examen2.exe "src\\Examen2.o" "src\\General.o" "src\\LinkedList.o" "src\\controller.o" "src\\editorial.o" "src\\libro.o" "src\\parser.o" 

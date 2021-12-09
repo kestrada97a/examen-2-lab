@@ -554,7 +554,86 @@ int ll_sort(LinkedList* this, int (*pFunc)(void* ,void*), int order)
 ///brief: filtra segun el dato deseado
 ///param: LinkedList* this, int (*fn)(void* element)
 ///
-/*LinkedList* ll_filter(LinkedList* this, int (*fn)(void* element))
+LinkedList* ll_filter(LinkedList* this, int (*fn)(void*))
 {
+	LinkedList* librosMinotauro=NULL;
+	librosMinotauro=ll_newLinkedList();
+	int len=ll_len(this);
+	int auxiliar;
+	void* pElement;
+	if(this!=NULL&&len>0)
+	{
+		for(int i=0;i<len;i++)
+		{
+			pElement=ll_get(this,i);
+			if(pElement!=NULL)
+			{
+				auxiliar=fn(pElement);
+				if(auxiliar==1)
+				{
+					ll_add(librosMinotauro,pElement);
+				}
+			}
+		}
+	}
+	return librosMinotauro;
 
-}*/
+}
+
+///brief: agrega el descuento segun la editorial
+///param: LinkedList* this, int (*fn)(void* )
+///
+LinkedList* ll_map(LinkedList* this, void* (*fn)(void*))
+{
+	LinkedList* libroConDescuento=NULL;
+	libroConDescuento=ll_newLinkedList();
+	int len=ll_len(this);
+	void* auxiliar;
+	void* pElement;
+	if(this!=NULL && len>0)
+	{
+		for(int i=0;i<len;i++)
+		{
+			pElement=ll_get(this,i);
+			if(pElement!=NULL)
+			{
+				auxiliar=fn(pElement);
+				if(auxiliar!=NULL)
+				{
+					ll_add(libroConDescuento,pElement);
+				}
+			}
+		}
+	}
+	return libroConDescuento;
+}
+///brief: cuenta/suma segun precio/editorial
+///param LinkedList* this, int(*fn)(void*)
+///
+int ll_count(LinkedList* this, int (*fn)(void*,float*),float* pTotal)
+{
+	int rtn=0;
+	int len=ll_len(this);
+	void* pElement;
+	int auxiliar;
+	float acumulador=0;
+	if(this!=NULL && len>0)
+	{
+		for(int i=0;i<len;i++)
+		{
+			pElement=ll_get(this,i);
+			if(pElement!=NULL)
+			{
+				auxiliar=fn(pElement,&acumulador);
+				if(auxiliar==1)
+				{
+					rtn++;
+				}
+				*pTotal=acumulador;
+
+			}
+		}
+	}
+
+	return rtn;
+}

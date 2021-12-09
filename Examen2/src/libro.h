@@ -31,4 +31,9 @@ int libro_setIdEditorial(eLibro* this, int idEditorial);
 int libro_getIdEditorial(eLibro* this, int* idEditorial);
 int libro_sortByAutor(void* primerDato, void* segundoDato);
 
+int filtroMinotauro (void* pElement);
+void* filtroPlanetaXXI(void * pElement);
+
+int libro_acumulador_contador(void* pElement, float* pTotal);
+
 #endif /* LIBRO_H_ */
